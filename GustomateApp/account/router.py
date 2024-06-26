@@ -12,7 +12,7 @@ from ..dependency.dependencies import oauth2_scheme, create_access_token, admin_
 router = APIRouter()
 
 # 회원가입
-@router.post("/signup", response_model=User)
+@router.post("/account/signup", response_model=User)
 async def signup(user: UserCreate, db: Session = Depends(get_db)):
     # 데이터베이스에서 이메일 중복 확인
     existing_user = get_user_by_email(db, email=user.useremail)
@@ -36,7 +36,7 @@ async def admin_signup(admin: Admin, db: Session = Depends(get_db)):
     return new_admin
 
 # 로그인
-@router.post("/login")
+@router.post("/account/login")
 async def login_for_access_token(request: Request, db: Session = Depends(get_db), form_data: OAuth2PasswordRequestForm = Depends()):
     user = await authenticate_accounts(db, email=form_data.username, password=form_data.password, is_admin=False)
     if not user:

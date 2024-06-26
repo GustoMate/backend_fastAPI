@@ -90,6 +90,27 @@ CREATE TABLE `recipe_reviews` (
     FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
+-- friends 테이블 생성
+CREATE TABLE `friends` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `user_id` int(11) NOT NULL,
+    `friend_id` int(11) NOT NULL,
+    `created_at` datetime DEFAULT NULL,
+    `updated_at` datetime DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`user_id`) REFERENCES users(`user_id`),
+    FOREIGN KEY (`friend_id`) REFERENCES users(`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+-- token_blacklist 테이블 생성
+CREATE TABLE `token_blacklist` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `jti` varchar(255) NOT NULL,
+    `exp` datetime NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+
 -- 테스트 유저 생성
 INSERT INTO users (username, useremail, password, profile_image, location, created_at, updated_at) 
 VALUES ('testuser', 'testuser@example.com', 'password123', 'profile_image_url', 'Seoul', NOW(), NOW());
@@ -124,3 +145,11 @@ VALUES
 (1, 1, '매운 김치 찌개 아주 좋아요', '매운 음식을 좋아하는 사람들에게 딱입니다. 간편하게 만들 수 있어요.', 5, NOW(), NOW()),
 (2, 1, '맛있는 스시 롤', '간단한 레시피로도 훌륭한 스시 롤을 만들 수 있네요. 재료만 신선하면 최고!', 4, NOW(), NOW()),
 (3, 1, '카르보나라 레시피 강추', '집에서 쉽게 만들 수 있어서 좋았습니다. 다음에도 이 레시피로 만들 것 같아요.', 5, NOW(), NOW());
+
+
+-- 예시 친구 관계 데이터 삽입
+INSERT INTO friends (user_id, friend_id, created_at, updated_at)
+VALUES 
+(1, 2, NOW(), NOW()),
+(1, 3, NOW(), NOW()),
+(2, 3, NOW(), NOW());

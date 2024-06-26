@@ -19,8 +19,8 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/accounts/login")
-admin_oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/accounts/admin/login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/account/login")
+admin_oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/account/admin/login")
 
 # 데이터베이스 세션을 가져오는 함수
 def get_db():
@@ -101,4 +101,6 @@ async def get_current_admin(db: Session = Depends(get_db), token: str = Depends(
         raise credentials_exception
     return admin
 
-
+async def is_token_blacklisted(db: Session, token_jti: str):
+    blacklisted_token = db.query(TokenBlacklist).filter(TokenBlacklist.jti == token_jti).first()
+    return blacklisted_token is not None
