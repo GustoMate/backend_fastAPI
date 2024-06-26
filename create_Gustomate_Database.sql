@@ -1,9 +1,11 @@
 CREATE DATABASE gustomate;
-use gustomate;
+USE gustomate;
+
+-- users 테이블 생성
 CREATE TABLE `users` (
     `user_id` int(11) NOT NULL AUTO_INCREMENT,
     `username` varchar(100) DEFAULT NULL,
-    `email` varchar(100) DEFAULT NULL,
+    `useremail` varchar(100) DEFAULT NULL,
     `password` varchar(100) DEFAULT NULL,
     `profile_image` varchar(100) DEFAULT NULL,
     `location` varchar(100) DEFAULT NULL,
@@ -11,6 +13,25 @@ CREATE TABLE `users` (
     `updated_at` datetime DEFAULT NULL,
     PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+-- 테스트 유저 생성
+INSERT INTO users (username, useremail, password, profile_image, location, created_at, updated_at) 
+VALUES ('testuser', 'testuser@example.com', 'password123', 'profile_image_url', 'Seoul', NOW(), NOW());
+
+-- admin 테이블 생성
+CREATE TABLE `admins` (
+    `admin_id` int(11) NOT NULL AUTO_INCREMENT,
+    `adminname` varchar(100) DEFAULT NULL,
+    `adminemail` varchar(100) DEFAULT NULL,
+    `adminpassword` varchar(100) DEFAULT NULL,
+    `created_at` datetime DEFAULT NULL,
+    `updated_at` datetime DEFAULT NULL,
+    PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+-- 기본 Admin 사용자 생성
+INSERT INTO admins (adminname, adminemail, adminpassword, created_at, updated_at)
+VALUES ('admin', 'admin@example.com', 'adminpassword123', NOW(), NOW());
 
 -- user_preferences 테이블 생성
 CREATE TABLE `user_preferences` (
@@ -47,7 +68,7 @@ CREATE TABLE `cuisines` (
     PRIMARY KEY (`cuisine_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
--- recipe 테이블 생성
+-- recipes 테이블 생성
 CREATE TABLE `recipes` (
     `recipe_id` int(11) NOT NULL AUTO_INCREMENT,
     `recipe_name` varchar(100) DEFAULT NULL,
@@ -66,12 +87,13 @@ CREATE TABLE `recipes` (
 CREATE TABLE `recipe_reviews` (
     `review_id` int(11) NOT NULL AUTO_INCREMENT,
     `recipe_id` int(11) DEFAULT NULL,
+    `user_id` int(11) DEFAULT NULL,
     `review_header` varchar(100) DEFAULT NULL,
     `review_text` text DEFAULT NULL,
     `rating` int(11) DEFAULT NULL,
     `created_at` datetime DEFAULT NULL,
     `updated_at` datetime DEFAULT NULL,
     PRIMARY KEY (`review_id`),
-    FOREIGN KEY (`recipe_id`) REFERENCES recipes(`recipe_id`)
+    FOREIGN KEY (`recipe_id`) REFERENCES recipes(`recipe_id`),
+    FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
-
