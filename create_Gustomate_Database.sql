@@ -1,5 +1,6 @@
 CREATE DATABASE gustomate;
 use gustomate;
+-- users 테이블 생성
 CREATE TABLE `users` (
     `user_id` int(11) NOT NULL AUTO_INCREMENT,
     `username` varchar(100) DEFAULT NULL,
@@ -11,6 +12,13 @@ CREATE TABLE `users` (
     `updated_at` datetime DEFAULT NULL,
     PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+-- 테스트 유저 생성
+USE gustomate;
+
+INSERT INTO users (username, email, password, profile_image, location, created_at, updated_at) 
+VALUES ('testuser', 'testuser@example.com', 'password123', 'profile_image_url', 'Seoul', NOW(), NOW());
+
 
 -- user_preferences 테이블 생성
 CREATE TABLE `user_preferences` (
@@ -66,6 +74,7 @@ CREATE TABLE `recipes` (
 CREATE TABLE `recipe_reviews` (
     `review_id` int(11) NOT NULL AUTO_INCREMENT,
     `recipe_id` int(11) DEFAULT NULL,
+    `user_id` int(11) DEFAULT NULL,
     `review_header` varchar(100) DEFAULT NULL,
     `review_text` text DEFAULT NULL,
     `rating` int(11) DEFAULT NULL,

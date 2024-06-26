@@ -38,7 +38,7 @@ class Chats(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
-class Recipe(Base):
+class Recipes(Base):
     __tablename__ = "recipes"
 
     recipe_id = Column(Integer, primary_key= True, index = True)
@@ -51,3 +51,14 @@ class Recipe(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
+class Recipe_Reviews(Base):
+    __tablename__ = "recipe_reviews"
+
+    review_id = Column(Integer, primary_key= True, index = True)
+    recipe_id = Column(Integer, ForeignKey("recipes.recipe_id"))
+    user_id = Column(Integer, ForeignKey("users.user_id"))
+    review_header = Column(String)
+    review_text = Column(String)
+    rating = Column(Integer)
+    created_at = Column(DateTime, default = datetime.now)
+    updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
