@@ -10,7 +10,7 @@ class Users(Base):
 
     user_id = Column(Integer, primary_key= True, index = True)
     username = Column(String)
-    email = Column(String)
+    useremail = Column(String)
     password = Column(String)
     profile_image = Column(String)
     location = Column(String)
@@ -62,3 +62,15 @@ class Recipe_Reviews(Base):
     rating = Column(Integer)
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
+
+
+class Admins(Base):
+    __tablename__ = "admins"
+
+    admin_id = Column(Integer, primary_key= True, index = True)
+    adminname = Column(String)
+    adminemail = Column(String)
+    adminpassword = Column(String)
+    created_at = Column(DateTime, default = datetime.now)
+    updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
+

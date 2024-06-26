@@ -1,12 +1,20 @@
 from fastapi import FastAPI
 import uvicorn
-from GustomateApp.signup.router import router as signup_router 
+from starlette.middleware.sessions import SessionMiddleware
+from GustomateApp.account.router import router as signup_router 
 from GustomateApp.recipe.router import router as recipe_router  
 
 app = FastAPI()
 
+
+SESSION_SECRET_KEY = "c6e65e55f2f1dafceacb3bbbda274420f11e3b6c5379c4133f0161b00c2ca581" #정식 배포전 변경, 분리 예정
+
+app.add_middleware(SessionMiddleware, secret_key=SESSION_SECRET_KEY)
+
+
 app.include_router(signup_router)
 app.include_router(recipe_router)
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
