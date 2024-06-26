@@ -4,6 +4,13 @@ from sqlalchemy.sql import func
 from datetime import datetime, date
 from pydantic import BaseModel
 
+class TokenBlacklist(Base):
+    __tablename__ = "token_blacklist"
+
+    id = Column(Integer, primary_key=True, index=True)
+    jti = Column(String, unique=True, index=True, nullable=False)
+    exp = Column(DateTime, nullable=False)
+
 # 데이터베이스 테이블 모델
 class Users(Base):
     __tablename__ = "users"
@@ -73,4 +80,14 @@ class Admins(Base):
     adminpassword = Column(String)
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
+
+class Friends(Base):
+    __tablename__ = "friends"
+
+    id = Column(Integer, primary_key= True, index = True)
+    user_id = Column(Integer, ForeignKey("users.user_id"))
+    friend_id = Column(Integer, ForeignKey("users.user_id"))
+    created_at = Column(DateTime, default = datetime.now)
+    updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
+
 
