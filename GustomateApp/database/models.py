@@ -51,12 +51,22 @@ class Recipes(Base):
     recipe_id = Column(Integer, primary_key= True, index = True)
     recipe_name = Column(String)
     image = Column(String)
-    difficulty = Column(Integer)
-    steps = Column(String)
-    cuisine_id = Column(Integer, ForeignKey("cuisines.cuisine_id"))
+    method_classifications = Column(String)
+    country_classification = Column(String)
+    theme_classification = Column(String)
+    difficulty_classification = Column(String)
+    calorie = Column(Integer)
+    view = Column(Integer)
+    quantity = Column(Integer)
+    main_ingredients = Column(String)
+    sub_ingredients = Column(String)
+    seasonings = Column(String)
+    recipe = Column(String)
+    cooking_time = Column(Integer)
     spiciness = Column(Integer)
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
+
 
 class Recipe_Reviews(Base):
     __tablename__ = "recipe_reviews"
@@ -96,7 +106,8 @@ class Market(Base):
     market_id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     ingredient_id = Column(Integer, ForeignKey("ingredients.id"), nullable=False)
-    description = Column(String, nullable=False)
+    market_image = Column(String)
+    market_description = Column(String, nullable=False)
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
