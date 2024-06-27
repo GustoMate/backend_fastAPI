@@ -28,12 +28,12 @@ class Ingredient(Base):
     description = Column(String, nullable=False)
 
 
-    
+
 class UserPreference(Base):
     __tablename__ = "user_preferences"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey('users.id'), unique=True, index=True)
+    user_id = Column(Integer, ForeignKey('users.user_id'), unique=True, index=True)
     spiciness_preference = Column(Integer)
     cooking_skill = Column(Integer)
     is_on_diet = Column(Boolean)

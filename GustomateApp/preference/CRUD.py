@@ -13,8 +13,12 @@ def create_user_preference(db: Session, preference: schemas.UserPreferenceCreate
 def get_user_preference(db: Session, user_id: int):
     db_preference = db.query(models.UserPreference).filter(models.UserPreference.user_id == user_id).first()
     if db_preference:
-        db_preference.allergies = json.loads(db_preference.allergies)
+        if db_preference.allergies:
+            db_preference.allergies = json.loads(db_preference.allergies)
+        else:
+            db_preference.allergies = []
     return db_preference
+
 
 def update_user_preference(db: Session, user_id: int, preference: schemas.UserPreferenceUpdate):
     db_preference = get_user_preference(db, user_id)

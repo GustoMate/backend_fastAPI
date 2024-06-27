@@ -12,16 +12,16 @@ from ..dependency.dependencies import get_token_from_session
 
 
 router = APIRouter(
-    prefix="/fridge/ingredients",
+    prefix="/ingredients",
     tags=["ingredients"],
     responses={404: {"description": "Not found"}},
 )
 
-@router.post("/", response_model=schemas.Ingredient, status_code=201)
+@router.post("", response_model=schemas.Ingredient, status_code=201)
 async def add_ingredient(ingredient: schemas.IngredientCreate, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
     return create_ingredient(db=db, ingredient=ingredient, user_id=current_user.user_id)
 
-@router.get("/", response_model=List[schemas.Ingredient])
+@router.get("", response_model=List[schemas.Ingredient])
 async def read_ingredients(db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
     ingredients = get_ingredients(db=db, user_id=current_user.user_id)
     return ingredients
