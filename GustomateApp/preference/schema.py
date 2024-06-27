@@ -1,14 +1,14 @@
 from pydantic import BaseModel
-from typing import Optional
+from datetime import date
 
 class UserPreferenceBase(BaseModel):
     spiciness_preference: int
     cooking_skill: int
     is_on_diet: bool
-    allergies: Optional[str] = None
+    allergies: str
 
 class UserPreferenceCreate(UserPreferenceBase):
-    user_id: int
+    pass
 
 class UserPreferenceUpdate(UserPreferenceBase):
     pass

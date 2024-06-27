@@ -27,6 +27,20 @@ class Ingredient(Base):
     user = relationship("Users", back_populates="ingredients")
 
 
+
+class UserPreference(Base):
+    __tablename__ = "user_preferences"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.user_id"))
+    spiciness_preference = Column(Integer)
+    cooking_skill = Column(Integer)
+    is_on_diet = Column(Boolean)
+    allergies = Column(String, nullable=True)
+
+    user = relationship("Users", back_populates="preferences")
+
+
 class Users(Base):
     __tablename__ = "users"
 
@@ -39,6 +53,7 @@ class Users(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
+    preferences = relationship("UserPreference", back_populates="user")
     ingredients = relationship("Ingredient", order_by=Ingredient.id, back_populates="user")
 
 class Chats(Base):
@@ -116,14 +131,3 @@ class Market(Base):
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
-
-
-class UserPreference(Base):
-    __tablename__ = "user_preferences"
-
-    id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.user_id"))
-    spiciness_preference = Column(Integer)
-    cooking_skill = Column(Integer)
-    is_on_diet = Column(Boolean)
-    allergies = Column(String, nullable=True)
