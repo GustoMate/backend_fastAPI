@@ -1,0 +1,1472 @@
+{
+    "version": "V2",
+    "requestId": "64a10de7-4fe4-44bf-ad68-b297fa444a15",
+    "timestamp": 1719531863708,
+    "images": [
+        {
+            "receipt": {
+                "meta": {
+                    "estimatedLanguage": "ko"
+                },
+                "result": {
+                    "subResults": [
+                        {
+                            "items": [
+                                {
+                                    "name": {
+                                        "text": "롯데)월드콘아몬드",
+                                        "formatted": {
+                                            "value": "롯데)월드콘아몬드"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.97102,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 15.0,
+                                                        "y": 54.0
+                                                    },
+                                                    {
+                                                        "x": 183.0,
+                                                        "y": 63.0
+                                                    },
+                                                    {
+                                                        "x": 181.0,
+                                                        "y": 89.0
+                                                    },
+                                                    {
+                                                        "x": 14.0,
+                                                        "y": 80.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95727,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 304.0,
+                                                        "y": 63.0
+                                                    },
+                                                    {
+                                                        "x": 314.0,
+                                                        "y": 63.0
+                                                    },
+                                                    {
+                                                        "x": 314.0,
+                                                        "y": 80.0
+                                                    },
+                                                    {
+                                                        "x": 304.0,
+                                                        "y": 80.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95246,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 351.0,
+                                                            "y": 59.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 59.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 82.0
+                                                        },
+                                                        {
+                                                            "x": 351.0,
+                                                            "y": 82.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97457,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 225.0,
+                                                            "y": 62.0
+                                                        },
+                                                        {
+                                                            "x": 278.0,
+                                                            "y": 62.0
+                                                        },
+                                                        {
+                                                            "x": 278.0,
+                                                            "y": 86.0
+                                                        },
+                                                        {
+                                                            "x": 225.0,
+                                                            "y": 86.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "빙그레)캔디바",
+                                        "formatted": {
+                                            "value": "빙그레)캔디바"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.97064,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 15.0,
+                                                        "y": 79.0
+                                                    },
+                                                    {
+                                                        "x": 143.0,
+                                                        "y": 85.0
+                                                    },
+                                                    {
+                                                        "x": 142.0,
+                                                        "y": 110.0
+                                                    },
+                                                    {
+                                                        "x": 14.0,
+                                                        "y": 104.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "2",
+                                        "formatted": {
+                                            "value": "2"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96315,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 301.0,
+                                                        "y": 86.0
+                                                    },
+                                                    {
+                                                        "x": 315.0,
+                                                        "y": 86.0
+                                                    },
+                                                    {
+                                                        "x": 315.0,
+                                                        "y": 105.0
+                                                    },
+                                                    {
+                                                        "x": 301.0,
+                                                        "y": 105.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95322,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 351.0,
+                                                            "y": 83.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 83.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 106.0
+                                                        },
+                                                        {
+                                                            "x": 351.0,
+                                                            "y": 106.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "500",
+                                            "formatted": {
+                                                "value": "500"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97163,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 241.0,
+                                                            "y": 86.0
+                                                        },
+                                                        {
+                                                            "x": 277.0,
+                                                            "y": 86.0
+                                                        },
+                                                        {
+                                                            "x": 277.0,
+                                                            "y": 109.0
+                                                        },
+                                                        {
+                                                            "x": 241.0,
+                                                            "y": 109.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "매일)호두와땅콩두유",
+                                        "formatted": {
+                                            "value": "매일)호두와땅콩두유"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96928,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 14.0,
+                                                        "y": 102.0
+                                                    },
+                                                    {
+                                                        "x": 200.0,
+                                                        "y": 113.0
+                                                    },
+                                                    {
+                                                        "x": 199.0,
+                                                        "y": 137.0
+                                                    },
+                                                    {
+                                                        "x": 13.0,
+                                                        "y": 127.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95888,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 303.0,
+                                                        "y": 111.0
+                                                    },
+                                                    {
+                                                        "x": 312.0,
+                                                        "y": 111.0
+                                                    },
+                                                    {
+                                                        "x": 312.0,
+                                                        "y": 128.0
+                                                    },
+                                                    {
+                                                        "x": 303.0,
+                                                        "y": 128.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "3,600",
+                                            "formatted": {
+                                                "value": "3600"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95028,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 349.0,
+                                                            "y": 107.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 107.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 130.0
+                                                        },
+                                                        {
+                                                            "x": 349.0,
+                                                            "y": 130.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "3,600",
+                                            "formatted": {
+                                                "value": "3600"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97262,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 222.0,
+                                                            "y": 110.0
+                                                        },
+                                                        {
+                                                            "x": 276.0,
+                                                            "y": 110.0
+                                                        },
+                                                        {
+                                                            "x": 276.0,
+                                                            "y": 133.0
+                                                        },
+                                                        {
+                                                            "x": 222.0,
+                                                            "y": 133.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "*빙그레)굿모닝우유*",
+                                        "formatted": {
+                                            "value": "*빙그레)굿모닝우유*"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96996,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 125.0
+                                                    },
+                                                    {
+                                                        "x": 200.0,
+                                                        "y": 137.0
+                                                    },
+                                                    {
+                                                        "x": 198.0,
+                                                        "y": 162.0
+                                                    },
+                                                    {
+                                                        "x": 9.0,
+                                                        "y": 150.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95894,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 302.0,
+                                                        "y": 136.0
+                                                    },
+                                                    {
+                                                        "x": 312.0,
+                                                        "y": 136.0
+                                                    },
+                                                    {
+                                                        "x": 312.0,
+                                                        "y": 152.0
+                                                    },
+                                                    {
+                                                        "x": 302.0,
+                                                        "y": 152.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,750",
+                                            "formatted": {
+                                                "value": "1750"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95437,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 350.0,
+                                                            "y": 131.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 131.0
+                                                        },
+                                                        {
+                                                            "x": 406.0,
+                                                            "y": 155.0
+                                                        },
+                                                        {
+                                                            "x": 350.0,
+                                                            "y": 155.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,750",
+                                            "formatted": {
+                                                "value": "1750"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.9737,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 224.0,
+                                                            "y": 135.0
+                                                        },
+                                                        {
+                                                            "x": 276.0,
+                                                            "y": 135.0
+                                                        },
+                                                        {
+                                                            "x": 276.0,
+                                                            "y": 157.0
+                                                        },
+                                                        {
+                                                            "x": 224.0,
+                                                            "y": 157.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "*수입돼지대패삼겹",
+                                        "formatted": {
+                                            "value": "*수입돼지대패삼겹"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.97073,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 151.0
+                                                    },
+                                                    {
+                                                        "x": 181.0,
+                                                        "y": 160.0
+                                                    },
+                                                    {
+                                                        "x": 179.0,
+                                                        "y": 184.0
+                                                    },
+                                                    {
+                                                        "x": 8.0,
+                                                        "y": 175.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95352,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 302.0,
+                                                        "y": 160.0
+                                                    },
+                                                    {
+                                                        "x": 311.0,
+                                                        "y": 160.0
+                                                    },
+                                                    {
+                                                        "x": 311.0,
+                                                        "y": 176.0
+                                                    },
+                                                    {
+                                                        "x": 302.0,
+                                                        "y": 176.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "6,240",
+                                            "formatted": {
+                                                "value": "6240"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95674,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 347.0,
+                                                            "y": 157.0
+                                                        },
+                                                        {
+                                                            "x": 404.0,
+                                                            "y": 156.0
+                                                        },
+                                                        {
+                                                            "x": 404.0,
+                                                            "y": 178.0
+                                                        },
+                                                        {
+                                                            "x": 347.0,
+                                                            "y": 179.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "6,240",
+                                            "formatted": {
+                                                "value": "6240"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97496,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 222.0,
+                                                            "y": 158.0
+                                                        },
+                                                        {
+                                                            "x": 276.0,
+                                                            "y": 158.0
+                                                        },
+                                                        {
+                                                            "x": 276.0,
+                                                            "y": 181.0
+                                                        },
+                                                        {
+                                                            "x": 222.0,
+                                                            "y": 181.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "*청양고추",
+                                        "formatted": {
+                                            "value": "*청양고추"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96698,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 176.0
+                                                    },
+                                                    {
+                                                        "x": 106.0,
+                                                        "y": 179.0
+                                                    },
+                                                    {
+                                                        "x": 105.0,
+                                                        "y": 203.0
+                                                    },
+                                                    {
+                                                        "x": 9.0,
+                                                        "y": 199.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95857,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 302.0,
+                                                        "y": 184.0
+                                                    },
+                                                    {
+                                                        "x": 310.0,
+                                                        "y": 184.0
+                                                    },
+                                                    {
+                                                        "x": 310.0,
+                                                        "y": 200.0
+                                                    },
+                                                    {
+                                                        "x": 302.0,
+                                                        "y": 200.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,500",
+                                            "formatted": {
+                                                "value": "1500"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95419,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 348.0,
+                                                            "y": 181.0
+                                                        },
+                                                        {
+                                                            "x": 403.0,
+                                                            "y": 181.0
+                                                        },
+                                                        {
+                                                            "x": 403.0,
+                                                            "y": 203.0
+                                                        },
+                                                        {
+                                                            "x": 348.0,
+                                                            "y": 203.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,500",
+                                            "formatted": {
+                                                "value": "1500"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97316,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 183.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 183.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 205.0
+                                                        },
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 205.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "*깻잎",
+                                        "formatted": {
+                                            "value": "*깻잎"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.92142,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 200.0
+                                                    },
+                                                    {
+                                                        "x": 65.0,
+                                                        "y": 203.0
+                                                    },
+                                                    {
+                                                        "x": 64.0,
+                                                        "y": 226.0
+                                                    },
+                                                    {
+                                                        "x": 9.0,
+                                                        "y": 223.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95252,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 301.0,
+                                                        "y": 208.0
+                                                    },
+                                                    {
+                                                        "x": 310.0,
+                                                        "y": 208.0
+                                                    },
+                                                    {
+                                                        "x": 310.0,
+                                                        "y": 224.0
+                                                    },
+                                                    {
+                                                        "x": 301.0,
+                                                        "y": 224.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.96006,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 346.0,
+                                                            "y": 204.0
+                                                        },
+                                                        {
+                                                            "x": 401.0,
+                                                            "y": 204.0
+                                                        },
+                                                        {
+                                                            "x": 401.0,
+                                                            "y": 228.0
+                                                        },
+                                                        {
+                                                            "x": 346.0,
+                                                            "y": 228.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.96463,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 206.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 206.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 229.0
+                                                        },
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 229.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "*강릉아삭콩나물",
+                                        "formatted": {
+                                            "value": "*강릉아삭콩나물"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96746,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 225.0
+                                                    },
+                                                    {
+                                                        "x": 162.0,
+                                                        "y": 229.0
+                                                    },
+                                                    {
+                                                        "x": 162.0,
+                                                        "y": 252.0
+                                                    },
+                                                    {
+                                                        "x": 9.0,
+                                                        "y": 248.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95675,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 300.0,
+                                                        "y": 231.0
+                                                    },
+                                                    {
+                                                        "x": 309.0,
+                                                        "y": 231.0
+                                                    },
+                                                    {
+                                                        "x": 309.0,
+                                                        "y": 247.0
+                                                    },
+                                                    {
+                                                        "x": 300.0,
+                                                        "y": 247.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95384,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 346.0,
+                                                            "y": 228.0
+                                                        },
+                                                        {
+                                                            "x": 400.0,
+                                                            "y": 228.0
+                                                        },
+                                                        {
+                                                            "x": 400.0,
+                                                            "y": 251.0
+                                                        },
+                                                        {
+                                                            "x": 346.0,
+                                                            "y": 251.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97154,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 229.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 229.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 251.0
+                                                        },
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 251.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "*판두부",
+                                        "formatted": {
+                                            "value": "*판두부"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96069,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 250.0
+                                                    },
+                                                    {
+                                                        "x": 85.0,
+                                                        "y": 250.0
+                                                    },
+                                                    {
+                                                        "x": 85.0,
+                                                        "y": 272.0
+                                                    },
+                                                    {
+                                                        "x": 10.0,
+                                                        "y": 272.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95515,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 300.0,
+                                                        "y": 254.0
+                                                    },
+                                                    {
+                                                        "x": 309.0,
+                                                        "y": 254.0
+                                                    },
+                                                    {
+                                                        "x": 309.0,
+                                                        "y": 270.0
+                                                    },
+                                                    {
+                                                        "x": 300.0,
+                                                        "y": 270.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "600",
+                                            "formatted": {
+                                                "value": "600"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95101,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 363.0,
+                                                            "y": 252.0
+                                                        },
+                                                        {
+                                                            "x": 400.0,
+                                                            "y": 252.0
+                                                        },
+                                                        {
+                                                            "x": 400.0,
+                                                            "y": 274.0
+                                                        },
+                                                        {
+                                                            "x": 363.0,
+                                                            "y": 274.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "600",
+                                            "formatted": {
+                                                "value": "600"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.96161,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 240.0,
+                                                            "y": 253.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 253.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 274.0
+                                                        },
+                                                        {
+                                                            "x": 240.0,
+                                                            "y": 274.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "처음처럼",
+                                        "formatted": {
+                                            "value": "처음처럼"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96781,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 13.0,
+                                                        "y": 272.0
+                                                    },
+                                                    {
+                                                        "x": 94.0,
+                                                        "y": 273.0
+                                                    },
+                                                    {
+                                                        "x": 94.0,
+                                                        "y": 297.0
+                                                    },
+                                                    {
+                                                        "x": 12.0,
+                                                        "y": 296.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.9615,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 300.0,
+                                                        "y": 277.0
+                                                    },
+                                                    {
+                                                        "x": 309.0,
+                                                        "y": 277.0
+                                                    },
+                                                    {
+                                                        "x": 309.0,
+                                                        "y": 293.0
+                                                    },
+                                                    {
+                                                        "x": 300.0,
+                                                        "y": 293.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,080",
+                                            "formatted": {
+                                                "value": "1080"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.9585,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 345.0,
+                                                            "y": 275.0
+                                                        },
+                                                        {
+                                                            "x": 400.0,
+                                                            "y": 275.0
+                                                        },
+                                                        {
+                                                            "x": 400.0,
+                                                            "y": 298.0
+                                                        },
+                                                        {
+                                                            "x": 345.0,
+                                                            "y": 298.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,080",
+                                            "formatted": {
+                                                "value": "1080"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.97207,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 222.0,
+                                                            "y": 275.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 275.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 297.0
+                                                        },
+                                                        {
+                                                            "x": 222.0,
+                                                            "y": 297.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": {
+                                        "text": "씨)부산어묵",
+                                        "formatted": {
+                                            "value": "씨)부산어묵"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.96821,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 11.0,
+                                                        "y": 296.0
+                                                    },
+                                                    {
+                                                        "x": 125.0,
+                                                        "y": 297.0
+                                                    },
+                                                    {
+                                                        "x": 125.0,
+                                                        "y": 321.0
+                                                    },
+                                                    {
+                                                        "x": 11.0,
+                                                        "y": 320.0
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "maskingPolys": []
+                                    },
+                                    "count": {
+                                        "text": "1",
+                                        "formatted": {
+                                            "value": "1"
+                                        },
+                                        "keyText": "",
+                                        "confidenceScore": 0.95872,
+                                        "boundingPolys": [
+                                            {
+                                                "vertices": [
+                                                    {
+                                                        "x": 299.0,
+                                                        "y": 300.0
+                                                    },
+                                                    {
+                                                        "x": 310.0,
+                                                        "y": 300.0
+                                                    },
+                                                    {
+                                                        "x": 310.0,
+                                                        "y": 317.0
+                                                    },
+                                                    {
+                                                        "x": 299.0,
+                                                        "y": 317.0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "price": {
+                                        "price": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.95326,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 346.0,
+                                                            "y": 299.0
+                                                        },
+                                                        {
+                                                            "x": 401.0,
+                                                            "y": 299.0
+                                                        },
+                                                        {
+                                                            "x": 401.0,
+                                                            "y": 322.0
+                                                        },
+                                                        {
+                                                            "x": 346.0,
+                                                            "y": 322.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "unitPrice": {
+                                            "text": "1,000",
+                                            "formatted": {
+                                                "value": "1000"
+                                            },
+                                            "keyText": "",
+                                            "confidenceScore": 0.96461,
+                                            "boundingPolys": [
+                                                {
+                                                    "vertices": [
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 298.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 298.0
+                                                        },
+                                                        {
+                                                            "x": 275.0,
+                                                            "y": 321.0
+                                                        },
+                                                        {
+                                                            "x": 223.0,
+                                                            "y": 321.0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "totalPrice": {
+                        "price": {
+                            "text": "19,770",
+                            "formatted": {
+                                "value": "19770"
+                            },
+                            "keyText": "카 드:",
+                            "confidenceScore": 0.74239,
+                            "boundingPolys": [
+                                {
+                                    "vertices": [
+                                        {
+                                            "x": 280.0,
+                                            "y": 485.0
+                                        },
+                                        {
+                                            "x": 402.0,
+                                            "y": 488.0
+                                        },
+                                        {
+                                            "x": 402.0,
+                                            "y": 513.0
+                                        },
+                                        {
+                                            "x": 279.0,
+                                            "y": 510.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "subTotal": [
+                        {
+                            "taxPrice": [
+                                {
+                                    "text": "698",
+                                    "formatted": {
+                                        "value": "698"
+                                    },
+                                    "keyText": "부가세:",
+                                    "confidenceScore": 0.92583,
+                                    "boundingPolys": [
+                                        {
+                                            "vertices": [
+                                                {
+                                                    "x": 363.0,
+                                                    "y": 393.0
+                                                },
+                                                {
+                                                    "x": 400.0,
+                                                    "y": 393.0
+                                                },
+                                                {
+                                                    "x": 400.0,
+                                                    "y": 414.0
+                                                },
+                                                {
+                                                    "x": 363.0,
+                                                    "y": 414.0
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "uid": "8db1ea473fbb4158a3c77b6cb956e977",
+            "name": "demo",
+            "inferResult": "SUCCESS",
+            "message": "SUCCESS",
+            "validationResult": {
+                "result": "NO_REQUESTED"
+            }
+        }
+    ]
+}

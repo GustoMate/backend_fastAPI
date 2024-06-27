@@ -7,6 +7,7 @@ from GustomateApp.friend.router import router as friend_router
 from GustomateApp.ingredients.router import router as ingredient_router
 from GustomateApp.preference.router import router as preference_router
 from GustomateApp.market.router import router as market_router
+from GustomateApp.ocr.router import router as ocr_router
 
 
 app = FastAPI()
@@ -23,6 +24,7 @@ app.include_router(friend_router)
 app.include_router(ingredient_router)
 app.include_router(preference_router)
 app.include_router(market_router)
+app.include_router(ocr_router)
 
 
 if __name__ == "__main__":
