@@ -30,16 +30,13 @@ CREATE TABLE `admins` (
 
 -- user_preferences 테이블 생성
 CREATE TABLE `user_preferences` (
-    `user_preferences_id` int(11) NOT NULL AUTO_INCREMENT,
-    `user_id` int(11) DEFAULT NULL,
-    `spiciness_preference` int(11) DEFAULT NULL,
-    `cooking_skill` varchar(100) DEFAULT NULL,
-    `fridge_public` boolean DEFAULT NULL,
-    `notification_enabled` boolean DEFAULT NULL,
-    `created_at` datetime DEFAULT NULL,
-    `updated_at` datetime DEFAULT NULL,
-    PRIMARY KEY (`user_preferences_id`),
-    FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
+  id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    spiciness_preference INT NOT NULL,
+    cooking_skill INT NOT NULL,
+    is_on_diet BOOLEAN NOT NULL,
+    allergies VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 -- chats 테이블 생성
@@ -146,6 +143,7 @@ CREATE TABLE `token_blacklist` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
+
 -- 테스트 유저 생성
 INSERT INTO users (username, useremail, password, profile_image, location, created_at, updated_at)
 VALUES
@@ -165,6 +163,12 @@ VALUES
 (2, 3, NOW(), NOW());
 
 
+-- 예시 재료 데이터 삽입
 INSERT INTO ingredients (user_id, name, quantity, purchaseDate, expiryDate)
 VALUES
 (0, potato, 3, 2024-01-01, 2024-01-01);
+
+-- 예시 선호도 데이터 삽입
+INSERT INTO user_preferences (user_id, spiciness_preference, cooking_skill, is_on_diet, allergies)
+VALUES
+(1, 3, 2, 1, 'milk');

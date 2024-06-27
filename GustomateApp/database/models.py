@@ -25,18 +25,7 @@ class Users(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
-class User_Preferences(Base):
-    __tablename__ = "user_preferences"
 
-    user_preference_id = Column(Integer, primary_key= True, index = True)
-    user_id = Column(Integer, ForeignKey("users.user_id"))
-    spiciness_preference = Column(Integer)
-    cooking_skill = Column(String)
-    fridge_public = Column(Boolean)
-    notification_enabled = Column(Boolean)
-    created_at = Column(DateTime, default = datetime.now)
-    updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
-    
 class Chats(Base):
     __tablename__ = "chats"
 
@@ -121,3 +110,13 @@ class Ingredient(Base):
     quantity = Column(Integer)
     purchaseDate = Column(Date)
     expiryDate = Column(Date)
+
+class UserPreference(Base):
+    __tablename__ = "user_preferences"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.user_id"))
+    spiciness_preference = Column(Integer)
+    cooking_skill = Column(Integer)
+    is_on_diet = Column(Boolean)
+    allergies = Column(String, nullable=True)
