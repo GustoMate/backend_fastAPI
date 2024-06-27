@@ -4,8 +4,8 @@ from starlette.middleware.sessions import SessionMiddleware
 from GustomateApp.account.router import router as signup_router 
 from GustomateApp.recipe.router import router as recipe_router  
 from GustomateApp.friend.router import router as friend_router
+from GustomateApp.ingredients.router import router as ingredient_router
 from GustomateApp.market.router import router as market_router
-from GustomateApp.fridge.router import router as fridge_router
 
 
 app = FastAPI()
@@ -19,9 +19,8 @@ app.add_middleware(SessionMiddleware, secret_key=SESSION_SECRET_KEY)
 app.include_router(signup_router)
 app.include_router(recipe_router)
 app.include_router(friend_router)
+app.include_router(ingredient_router)
 app.include_router(market_router)
-app.include_router(fridge_router)
-
 
 
 if __name__ == "__main__":
