@@ -102,6 +102,7 @@ CREATE TABLE `market` (
     `updated_at` datetime DEFAULT NULL,
     PRIMARY KEY (`market_id`),
     FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
+    FOREIGN KEY (`ingredient_id`) REFERENCES ingredients(`ingredient_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 -- friends 테이블 생성
