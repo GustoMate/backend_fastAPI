@@ -33,6 +33,8 @@ class User_Preferences(Base):
     cooking_skill = Column(String)
     fridge_public = Column(Boolean)
     notification_enabled = Column(Boolean)
+    dieting = Column(Boolean)
+    allergic_info = Column(String)
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
     
