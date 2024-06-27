@@ -1,12 +1,11 @@
 from pydantic import BaseModel
 from datetime import date
 
-
 class IngredientBase(BaseModel):
     name: str
     quantity: int
-    purchaseDate: date
     expiryDate: date
+    description: str
 
 class IngredientCreate(IngredientBase):
     pass

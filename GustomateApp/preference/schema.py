@@ -1,11 +1,12 @@
 from pydantic import BaseModel
-from datetime import date
+from typing import List
 
 class UserPreferenceBase(BaseModel):
     spiciness_preference: int
     cooking_skill: int
     is_on_diet: bool
-    allergies: str
+    has_allergies: bool  # 알러지 여부
+    allergies: List[str] = []  # 알러지 목록
 
 class UserPreferenceCreate(UserPreferenceBase):
     pass

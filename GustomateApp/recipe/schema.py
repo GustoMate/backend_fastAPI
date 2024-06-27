@@ -1,12 +1,15 @@
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
+from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy.ext.declarative import declarative_base
 
 # Recipe: Recipe 정보
+
 class Recipe(BaseModel):
     recipe_id: int
     recipe_name: str
     image: str
-    method_classification: str
+    method_classification: str  # 여기도 일치하게 수정
     country_classification: str
     theme_classification: str
     difficulty_classification: str
@@ -21,6 +24,8 @@ class Recipe(BaseModel):
     spiciness: int
     created_at: datetime
     updated_at: datetime
+
+  
 
 
 class RecipeReviews(BaseModel):

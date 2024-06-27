@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from . import schema as schemas
 from ..database import models
 
-
 def get_ingredient(db: Session, ingredient_id: int):
     return db.query(models.Ingredient).filter(models.Ingredient.id == ingredient_id).first()
 

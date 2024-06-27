@@ -31,12 +31,13 @@ CREATE TABLE `admins` (
 -- user_preferences 테이블 생성
 CREATE TABLE `user_preferences` (
   id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    spiciness_preference INT NOT NULL,
-    cooking_skill INT NOT NULL,
-    is_on_diet BOOLEAN NOT NULL,
-    allergies VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+  user_id INT NOT NULL,
+  spiciness_preference INT NOT NULL,
+  cooking_skill INT NOT NULL,
+  is_on_diet BOOLEAN NOT NULL,
+  has_allergies BOOLEAN NOT NULL,  -- 알러지 여부 추가
+  allergies TEXT,  -- 알러지 목록을 JSON 형식으로 저장
+  FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 -- chats 테이블 생성

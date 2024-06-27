@@ -10,6 +10,7 @@ from ..dependency.dependencies import get_current_user
 from ..dependency.dependencies import get_token_from_session
 
 
+
 router = APIRouter(
     prefix="/fridge/ingredients",
     tags=["ingredients"],
@@ -26,14 +27,14 @@ async def read_ingredients(db: Session = Depends(get_db), current_user: models.U
     return ingredients
 
 @router.put("/{ingredient_id}", response_model=schemas.Ingredient)
-async def update_ingredient(ingredient_id: int, ingredient: schemas.IngredientUpdate, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
+async def modify_ingredient(ingredient_id: int, ingredient: schemas.IngredientUpdate, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
     db_ingredient = update_ingredient(db=db, ingredient_id=ingredient_id, ingredient=ingredient)
     if db_ingredient is None or db_ingredient.user_id != current_user.user_id:
         raise HTTPException(status_code=404, detail="Ingredient not found")
     return db_ingredient
 
 @router.delete("/{ingredient_id}", status_code=204)
-async def delete_ingredient(ingredient_id: int, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
+async def remove_ingredient(ingredient_id: int, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
     db_ingredient = get_ingredient(db, ingredient_id=ingredient_id)
     if db_ingredient is None or db_ingredient.user_id != current_user.user_id:
         raise HTTPException(status_code=404, detail="Ingredient not found")

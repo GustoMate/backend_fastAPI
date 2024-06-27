@@ -1,9 +1,11 @@
 from .database import Base
-from sqlalchemy import Column, Integer, String, ForeignKey, Date, Float, DateTime, Boolean
+from sqlalchemy import Column, Integer, String, ForeignKey, Date, Float, DateTime, Boolean, Text
 from sqlalchemy.sql import func
 from datetime import datetime, date
 from pydantic import BaseModel
 from sqlalchemy.orm import relationship
+import json
+
 
 class TokenBlacklist(Base):
     __tablename__ = "token_blacklist"
@@ -14,6 +16,7 @@ class TokenBlacklist(Base):
 
 # 데이터베이스 테이블 모델
 
+
 class Ingredient(Base):
     __tablename__ = "ingredients"
 
@@ -21,24 +24,36 @@ class Ingredient(Base):
     user_id = Column(Integer, ForeignKey("users.user_id"), nullable=False)
     name = Column(String, nullable=False)
     quantity = Column(Integer, nullable=False)
-    purchaseDate = Column(Date, nullable=False)
     expiryDate = Column(Date, nullable=False)
-
-    user = relationship("Users", back_populates="ingredients")
-
+    description = Column(String, nullable=False)
 
 
+    
 class UserPreference(Base):
     __tablename__ = "user_preferences"
-
+    
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.user_id"))
+    user_id = Column(Integer, ForeignKey('users.id'), unique=True, index=True)
     spiciness_preference = Column(Integer)
     cooking_skill = Column(Integer)
     is_on_diet = Column(Boolean)
-    allergies = Column(String, nullable=True)
+    has_allergies = Column(Boolean)
+    allergies = Column(Text)  # JSON 형태로 저장
 
-    user = relationship("Users", back_populates="preferences")
+
+    def __init__(self, **kwargs):
+        if 'allergies' in kwargs:
+            kwargs['allergies'] = json.dumps(kwargs['allergies'])
+        super().__init__(**kwargs)
+
+    def as_dict(self):
+        result = super().as_dict()
+        result['allergies'] = json.loads(result['allergies'])
+        return result
+
+
+
+
 
 
 class Users(Base):
@@ -53,9 +68,6 @@ class Users(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
-    preferences = relationship("UserPreference", back_populates="user")
-    ingredients = relationship("Ingredient", order_by=Ingredient.id, back_populates="user")
-
 class Chats(Base):
     __tablename__ = "chats"
 
@@ -68,10 +80,10 @@ class Chats(Base):
 class Recipes(Base):
     __tablename__ = "recipes"
 
-    recipe_id = Column(Integer, primary_key= True, index = True)
+    recipe_id = Column(Integer, primary_key=True, index=True)
     recipe_name = Column(String)
     image = Column(String)
-    method_classifications = Column(String)
+    method_classification = Column(String)  # 수정된 부분
     country_classification = Column(String)
     theme_classification = Column(String)
     difficulty_classification = Column(String)
@@ -84,9 +96,8 @@ class Recipes(Base):
     recipe = Column(String)
     cooking_time = Column(Integer)
     spiciness = Column(Integer)
-    created_at = Column(DateTime, default = datetime.now)
-    updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
-
+    created_at = Column(DateTime, default=datetime.now)
+    updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)
 
 class Recipe_Reviews(Base):
     __tablename__ = "recipe_reviews"
