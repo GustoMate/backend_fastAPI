@@ -91,17 +91,26 @@ CREATE TABLE `recipe_reviews` (
     FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
+-- ingredients 테이블 생성
+CREATE TABLE `ingredients` (
+    `ingredient_id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) DEFAULT NULL,
+    `created_at` datetime DEFAULT NULL,
+    `updated_at` datetime DEFAULT NULL,
+    PRIMARY KEY (`ingredient_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
 -- market 테이블 생성
 CREATE TABLE `market` (
     `market_id` int(11) NOT NULL AUTO_INCREMENT,
     `user_id` int(11) DEFAULT NULL,
-    `ingredient_id` varchar(100) DEFAULT NULL,
+    `ingredient_id` int(11) DEFAULT NULL,
     `market_image` varchar(100) DEFAULT NULL,
     `market_description` TEXT DEFAULT NULL,
     `created_at` datetime DEFAULT NULL,
     `updated_at` datetime DEFAULT NULL,
     PRIMARY KEY (`market_id`),
-    FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
+    FOREIGN KEY (`user_id`) REFERENCES users(`user_id`),
     FOREIGN KEY (`ingredient_id`) REFERENCES ingredients(`ingredient_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
@@ -127,7 +136,7 @@ CREATE TABLE `token_blacklist` (
 
 -- 테스트 유저 생성
 INSERT INTO users (username, useremail, password, profile_image, location, created_at, updated_at)
-VALUES 
+VALUES
 ('testuser1', 'testuser1@example.com', 'password123', 'profile_image_url', 'Seoul', NOW(), NOW()),
 ('testuser2', 'testuser2@example.com', 'password123', 'profile_image_url', 'Seoul', NOW(), NOW()),
 ('testuser3', 'testuser3@example.com', 'password123', 'profile_image_url', 'Seoul', NOW(), NOW());

@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordBearer
 from datetime import datetime, timedelta
 from uuid import uuid4
 from ..account.schema import TokenData
-from ..database.models import Users, Admins
+from ..database.models import Users, Admins, TokenBlacklist
 from fastapi import HTTPException, Depends
 from starlette.requests import Request
 from jose import jwt, JWTError
