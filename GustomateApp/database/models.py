@@ -90,4 +90,13 @@ class Friends(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
+class Market(Base):
+    __tablename__ = "market"
+
+    market_id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    ingredient_id = Column(Integer, ForeignKey("ingredients.id"), nullable=False)
+    description = Column(String, nullable=False)
+    created_at = Column(DateTime, default=func.now())
+    updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
