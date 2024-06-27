@@ -4,6 +4,7 @@ from sqlalchemy.sql import func
 from datetime import datetime, date
 from pydantic import BaseModel
 from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import as_declarative
 import json
 
 
@@ -29,6 +30,11 @@ class Ingredient(Base):
 
 
 
+@as_declarative()
+class Base:
+    def as_dict(self):
+        return {column.name: getattr(self, column.name) for column in self.__table__.columns}
+
 class UserPreference(Base):
     __tablename__ = "user_preferences"
     
@@ -39,7 +45,6 @@ class UserPreference(Base):
     is_on_diet = Column(Boolean)
     has_allergies = Column(Boolean)
     allergies = Column(Text)  # JSON 형태로 저장
-
 
     def __init__(self, **kwargs):
         if 'allergies' in kwargs:
@@ -53,7 +58,33 @@ class UserPreference(Base):
 
 
 
+@as_declarative()
+class Base:
+    def as_dict(self):
+        return {column.name: getattr(self, column.name) for column in self.__table__.columns}
 
+
+
+class UserPreference(Base):
+    __tablename__ = "user_preferences"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey('users.user_id'), unique=True, index=True)
+    spiciness_preference = Column(Integer)
+    cooking_skill = Column(Integer)
+    is_on_diet = Column(Boolean)
+    has_allergies = Column(Boolean)
+    allergies = Column(Text)  # JSON 형태로 저장
+
+    def __init__(self, **kwargs):
+        if 'allergies' in kwargs:
+            kwargs['allergies'] = json.dumps(kwargs['allergies'])
+        super().__init__(**kwargs)
+
+    def as_dict(self):
+        result = super().as_dict()
+        result['allergies'] = json.loads(result['allergies'])
+        return result
 
 
 class Users(Base):

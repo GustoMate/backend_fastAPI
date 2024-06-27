@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List
 
 class UserPreferenceBase(BaseModel):
@@ -19,4 +19,4 @@ class UserPreference(UserPreferenceBase):
     user_id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # Pydantic V2에서는 'orm_mode' 대신 'from_attributes'를 사용합니다.
