@@ -17,24 +17,52 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
+async def get_current_user_from_token(request: Request, db: Session = Depends(get_db)):
+    token = await get_token_from_session(request)
+    if not token:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    
+    # 여기서 토큰을 사용하여 사용자를 인증하고 가져옵니다.
+    user = get_current_user(db, token=token)
+    if not user:
+        raise HTTPException(status_code=401, detail="Invalid token or user not found")
+    
+    return user
+
 @router.post("", response_model=schemas.Ingredient, status_code=201)
-async def add_ingredient(ingredient: schemas.IngredientCreate, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
+async def add_ingredient(
+    ingredient: schemas.IngredientCreate, 
+    db: Session = Depends(get_db), 
+    current_user: models.Users = Depends(get_current_user_from_token)
+):
     return create_ingredient(db=db, ingredient=ingredient, user_id=current_user.user_id)
 
 @router.get("", response_model=List[schemas.Ingredient])
-async def read_ingredients(db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
+async def read_ingredients(
+    db: Session = Depends(get_db), 
+    current_user: models.Users = Depends(get_current_user_from_token)
+):
     ingredients = get_ingredients(db=db, user_id=current_user.user_id)
     return ingredients
 
 @router.put("/{ingredient_id}", response_model=schemas.Ingredient)
-async def modify_ingredient(ingredient_id: int, ingredient: schemas.IngredientUpdate, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
+async def modify_ingredient(
+    ingredient_id: int, 
+    ingredient: schemas.IngredientUpdate, 
+    db: Session = Depends(get_db), 
+    current_user: models.Users = Depends(get_current_user_from_token)
+):
     db_ingredient = update_ingredient(db=db, ingredient_id=ingredient_id, ingredient=ingredient)
     if db_ingredient is None or db_ingredient.user_id != current_user.user_id:
         raise HTTPException(status_code=404, detail="Ingredient not found")
     return db_ingredient
 
 @router.delete("/{ingredient_id}", status_code=204)
-async def remove_ingredient(ingredient_id: int, db: Session = Depends(get_db), current_user: models.Users = Depends(get_current_user)):
+async def remove_ingredient(
+    ingredient_id: int, 
+    db: Session = Depends(get_db), 
+    current_user: models.Users = Depends(get_current_user_from_token)
+):
     db_ingredient = get_ingredient(db, ingredient_id=ingredient_id)
     if db_ingredient is None or db_ingredient.user_id != current_user.user_id:
         raise HTTPException(status_code=404, detail="Ingredient not found")
