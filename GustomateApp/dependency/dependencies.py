@@ -9,6 +9,7 @@ from ..database.models import Users, Admins, TokenBlacklist
 from fastapi import HTTPException, Depends
 from starlette.requests import Request
 from jose import jwt, JWTError
+from ..database.models import TokenBlacklist
 
 
 

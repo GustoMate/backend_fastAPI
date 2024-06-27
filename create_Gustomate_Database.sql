@@ -4,7 +4,6 @@ DROP DATABASE IF EXISTS gustomate;
 -- 데이터베이스 생성
 CREATE DATABASE gustomate;
 USE gustomate;
-
 -- users 테이블 생성
 CREATE TABLE `users` (
     `user_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -126,6 +125,24 @@ CREATE TABLE `friends` (
     FOREIGN KEY (`friend_id`) REFERENCES users(`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
+
+-- Fridge 테이블 생성
+CREATE TABLE IF NOT EXISTS `fridge` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+-- Ingredient 테이블 생성
+CREATE TABLE IF NOT EXISTS `ingredients` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fridge_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    quantity INT NOT NULL,
+    purchaseDate DATE NOT NULL,
+    expiryDate DATE NOT NULL,
+    FOREIGN KEY (fridge_id) REFERENCES fridge(id) ON DELETE CASCADE
+);
 -- token_blacklist 테이블 생성
 CREATE TABLE `token_blacklist` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
