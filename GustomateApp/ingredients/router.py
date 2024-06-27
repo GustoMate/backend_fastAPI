@@ -13,14 +13,13 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-
 @router.post("/", response_model=schema.Ingredient, status_code=201)
 def add_ingredient(ingredient: schema.IngredientCreate, db: Session = Depends(get_db)):
     return crud.create_ingredient(db=db, ingredient=ingredient)
 
 @router.get("/", response_model=List[schema.Ingredient])
-def read_ingredients(name: str = None, purchaseDate: str = None, expiryDate: str = None, db: Session = Depends(get_db)):
-    ingredients = crud.get_ingredients(db=db, name=name, purchaseDate=purchaseDate, expiryDate=expiryDate)
+def read_ingredients(user_id: int, db: Session = Depends(get_db)):
+    ingredients = crud.get_ingredients(db=db, user_id=user_id)
     return ingredients
 
 @router.put("/{ingredient_id}", response_model=schema.Ingredient)

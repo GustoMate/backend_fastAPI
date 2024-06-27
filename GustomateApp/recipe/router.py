@@ -7,7 +7,6 @@ from ..dependency.dependencies import get_db
 from ..database import models
 
 router = APIRouter()
-
 # 레시피 목록
 @router.get("/recipes", response_model=List[Recipe])
 async def get_recipe_list(skip: int = 0, limit: int = 6, db: Session = Depends(get_db)):

@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import date
-from typing import List
+
 
 class IngredientBase(BaseModel):
     name: str
@@ -9,13 +9,14 @@ class IngredientBase(BaseModel):
     expiryDate: date
 
 class IngredientCreate(IngredientBase):
-    pass
+    user_id: int
 
 class IngredientUpdate(IngredientBase):
     pass
 
 class Ingredient(IngredientBase):
     id: int
+    user_id: int
 
     class Config:
         orm_mode = True

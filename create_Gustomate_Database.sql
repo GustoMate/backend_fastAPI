@@ -102,23 +102,18 @@ CREATE TABLE `friends` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 
--- Fridge 테이블 생성
-CREATE TABLE IF NOT EXISTS `fridge` (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(11) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-
 -- Ingredient 테이블 생성
-CREATE TABLE IF NOT EXISTS `ingredients` (
+CREATE TABLE IF NOT EXISTS ingredients (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    fridge_id INT NOT NULL,
+    user_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     quantity INT NOT NULL,
     purchaseDate DATE NOT NULL,
     expiryDate DATE NOT NULL,
-    FOREIGN KEY (fridge_id) REFERENCES fridge(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
+
+
 -- token_blacklist 테이블 생성
 CREATE TABLE `token_blacklist` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -170,3 +165,8 @@ VALUES
 (1, 2, NOW(), NOW()),
 (1, 3, NOW(), NOW()),
 (2, 3, NOW(), NOW());
+
+
+INSERT INTO ingredients (user_id, name, quantity, purchaseDate, expiryDate)
+VALUES
+(0, potato, 3, 2024-01-01, 2024-01-01);
