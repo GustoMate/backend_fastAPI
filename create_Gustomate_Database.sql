@@ -87,15 +87,6 @@ CREATE TABLE `recipe_reviews` (
     FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
--- ingredients 테이블 생성
-CREATE TABLE `ingredients` (
-    `ingredient_id` int(11) NOT NULL AUTO_INCREMENT,
-    `name` varchar(100) DEFAULT NULL,
-    `created_at` datetime DEFAULT NULL,
-    `updated_at` datetime DEFAULT NULL,
-    PRIMARY KEY (`ingredient_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
-
 -- market 테이블 생성
 CREATE TABLE `market` (
     `market_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -123,7 +114,7 @@ CREATE TABLE `friends` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 
--- Ingredient 테이블 생성
+-- ingredients 테이블 생성
 CREATE TABLE IF NOT EXISTS ingredients (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -131,8 +122,10 @@ CREATE TABLE IF NOT EXISTS ingredients (
     quantity INT NOT NULL,
     purchaseDate DATE NOT NULL,
     expiryDate DATE NOT NULL,
+    created_at datetime DEFAULT CURRENT_TIMESTAMP,
+    updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
-);
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 
 -- token_blacklist 테이블 생성
@@ -166,7 +159,9 @@ VALUES
 -- 예시 재료 데이터 삽입
 INSERT INTO ingredients (user_id, name, quantity, purchaseDate, expiryDate)
 VALUES
-(0, potato, 3, 2024-01-01, 2024-01-01);
+(1, 'potato', 3, '2024-01-01', '2024-01-01'),
+(2, 'carrot', 5, '2024-01-01', '2024-01-01'),
+(3, 'onion', 10, '2024-01-01', '2024-01-01');
 
 -- 예시 선호도 데이터 삽입
 INSERT INTO user_preferences (user_id, spiciness_preference, cooking_skill, is_on_diet, allergies)
