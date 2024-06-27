@@ -9,7 +9,7 @@ class IngredientBase(BaseModel):
     expiryDate: date
 
 class IngredientCreate(IngredientBase):
-    user_id: int
+    pass
 
 class IngredientUpdate(IngredientBase):
     pass

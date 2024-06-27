@@ -13,6 +13,20 @@ class TokenBlacklist(Base):
     exp = Column(DateTime, nullable=False)
 
 # 데이터베이스 테이블 모델
+
+class Ingredient(Base):
+    __tablename__ = "ingredients"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.user_id"), nullable=False)
+    name = Column(String, nullable=False)
+    quantity = Column(Integer, nullable=False)
+    purchaseDate = Column(Date, nullable=False)
+    expiryDate = Column(Date, nullable=False)
+
+    user = relationship("Users", back_populates="ingredients")
+
+
 class Users(Base):
     __tablename__ = "users"
 
@@ -25,6 +39,7 @@ class Users(Base):
     created_at = Column(DateTime, default = datetime.now)
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
+    ingredients = relationship("Ingredient", order_by=Ingredient.id, back_populates="user")
 
 class Chats(Base):
     __tablename__ = "chats"
@@ -101,15 +116,7 @@ class Market(Base):
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default = datetime.now, onupdate = datetime.now)
 
-class Ingredient(Base):
-    __tablename__ = "ingredients"
 
-    id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.user_id"), nullable=False)
-    name = Column(String, index=True)
-    quantity = Column(Integer)
-    purchaseDate = Column(Date)
-    expiryDate = Column(Date)
 
 class UserPreference(Base):
     __tablename__ = "user_preferences"

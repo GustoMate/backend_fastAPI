@@ -9,8 +9,8 @@ def get_ingredient(db: Session, ingredient_id: int):
 def get_ingredients(db: Session, user_id: int):
     return db.query(models.Ingredient).filter(models.Ingredient.user_id == user_id).all()
 
-def create_ingredient(db: Session, ingredient: schemas.IngredientCreate):
-    db_ingredient = models.Ingredient(**ingredient.dict())
+def create_ingredient(db: Session, ingredient: schemas.IngredientCreate, user_id: int):
+    db_ingredient = models.Ingredient(**ingredient.dict(), user_id=user_id)
     db.add(db_ingredient)
     db.commit()
     db.refresh(db_ingredient)
