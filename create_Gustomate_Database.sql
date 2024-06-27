@@ -88,11 +88,6 @@ CREATE TABLE `recipe_reviews` (
     FOREIGN KEY (`user_id`) REFERENCES users(`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
--- ingredients 테이블 생성
-CREATE TABLE `ingredients` (
-    `ingredient_id` int(11) NOT NULL AUTO_INCREMENT,
-    `ingredient_name` 
-
 -- friends 테이블 생성
 CREATE TABLE `friends` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
