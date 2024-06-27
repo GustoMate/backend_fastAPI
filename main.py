@@ -5,6 +5,7 @@ from GustomateApp.account.router import router as signup_router
 from GustomateApp.recipe.router import router as recipe_router  
 from GustomateApp.friend.router import router as friend_router
 from GustomateApp.ingredients.router import router as ingredient_router
+from GustomateApp.preference.router import router as preference_router
 
 app = FastAPI()
 
@@ -18,6 +19,7 @@ app.include_router(signup_router)
 app.include_router(recipe_router)
 app.include_router(friend_router)
 app.include_router(ingredient_router)
+app.include_router(preference_router)
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
